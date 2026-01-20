@@ -22,6 +22,15 @@ const bloodRequestRoutes = require('./routes/bloodRequestRoutes');
 app.use('/api/blood-requests', bloodRequestRoutes);
 const otpRoutes = require('./routes/otpRoutes');
 
+app.get('/', (req, res) => {
+  res.send('MensConnect Backend Running 🚀');
+});
+
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', time: new Date() });
+});
+
+
 app.use('/api/otp', otpRoutes);
 
 // Serve uploaded images
