@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.dc-wrap{font-family:Inter,system-ui,Arial;background:transparent;padding:18px 18px 18px 240px;display:flex;align-items:flex-start;gap:20px}
+.dc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.dc-title{margin:0;color:#111;font-size:20px}
+.dc-actions{display:flex;gap:10px;align-items:center}
+.dc-tab{background:#f3f4f6;border:1px solid #e5e7eb;padding:10px 14px;border-radius:8px;cursor:pointer;color:#111}
+.dc-tab.active{background:#ef4444;color:white;border-color:#ef4444}
+.dc-logout{background:#111827;color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+
+.dc-main{display:flex;flex:1}
+.dc-content{flex:1;background:rgba(255,255,255,0.02);padding:18px;border-radius:10px;min-height:60vh}
+
+/* Dashboard cards */
+.dashboard-cards{display:flex;gap:16px;align-items:flex-start}
+.dc-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:10px;min-width:220px;color:#e6eef8;box-shadow:0 6px 18px rgba(2,6,23,0.4)}
+.dc-card-title{font-weight:600;margin-bottom:8px}
+.dc-card-value{font-size:28px;font-weight:700;margin-bottom:12px}
+.dc-card-action{background:#111827;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+
+/* icon spacing */
+.dc-side-nav button svg,.dc-card-title svg,.nav-notif svg{vertical-align:middle;margin-right:8px}
+.dc-side-nav button svg{font-size:18px}
+.dc-card-title svg{font-size:20px}
+.nav-notif svg{font-size:18px}
+
+/* Sidebar styles */
+.dc-sidebar{width:200px;background:#0b1220;color:#fff;padding:48px 18px 18px 18px;border-radius:10px;display:flex;flex-direction:column;gap:12px;position:fixed;top:64px;left:18px;bottom:18px;z-index:90;overflow:auto}
+.dc-side-brand{font-weight:700;font-size:18px}
+.dc-side-nav{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.dc-side-nav button{background:transparent;border:none;color:#cbd5e1;padding:10px;border-radius:8px;text-align:left;cursor:pointer}
+.dc-side-nav button.active,.dc-side-nav button:hover{background:rgba(255,255,255,0.03);color:#fff}
+.dc-side-logout{margin-top:auto;background:#ef4444;color:#fff;padding:10px;border-radius:8px;border:none;cursor:pointer;width:100%}
+
+/* search removed: styles deleted */
+
+/* Blood requests table styles */
+.requests-wrap{width:100%}
+.requests-table-wrap{overflow:auto;background:transparent;padding:6px 0}
+.requests-table{width:100%;border-collapse:collapse;background:#0f1724;color:#e6eef8}
+.requests-table th,.requests-table td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.requests-table thead th{background:rgba(255,255,255,0.03);color:#9aa4b2}
+.requests-table tbody tr:hover{background:rgba(255,255,255,0.02)}
+.requests-table th:first-child,.requests-table td:first-child{width:72px;text-align:center}
+.requests-table th:nth-child(3),.requests-table td:nth-child(3){width:110px}
+.requests-table th:nth-child(4),.requests-table td:nth-child(4){width:160px}
+.requests-table th:nth-child(5),.requests-table td:nth-child(5){width:180px}
+.requests-table th:nth-child(7),.requests-table td:nth-child(7){width:140px}
+
+/* small responsive tweaks */
+@media (max-width:700px){
+  .dc-header{flex-direction:column;align-items:flex-start;gap:12px}
+  .dc-actions{width:100%;justify-content:flex-start}
+  .dc-sidebar{display:none}
+}
+
+/* Users table styles (match requests) */
+.users-wrap{width:100%}
+.users-table-wrap{overflow:auto;background:transparent;padding:6px 0}
+.users-table{width:100%;border-collapse:collapse;background:#0f1724;color:#e6eef8}
+.users-table th,.users-table td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.users-table thead th{background:rgba(255,255,255,0.03);color:#9aa4b2}
+.users-table tbody tr:hover{background:rgba(255,255,255,0.02)}
+.users-table th:first-child,.users-table td:first-child{width:72px;text-align:center}
+.users-table th:nth-child(2),.users-table td:nth-child(2){width:72px}
+.users-table th:nth-child(4),.users-table td:nth-child(4){width:140px}
+.users-table th:nth-child(5),.users-table td:nth-child(5){width:140px}
+.users-delete{background:#ef4444;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer}
+
+/* Admin Jobs form styles (match Blood Requests / dashboard look) */
+.dc-form{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.dc-form input,.dc-form select,.dc-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:8px;color:inherit;font-family:Inter,system-ui,Arial;outline:none}
+.dc-form input::placeholder,.dc-form textarea::placeholder{color:rgba(255,255,255,0.35)}
+.dc-form input:focus,.dc-form select:focus,.dc-form textarea:focus{border-color:#646cff;background:rgba(100,108,255,0.04)}
+.dc-form textarea{resize:vertical}
+.dc-form button{background:#111827;color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+.dc-form button:disabled{opacity:0.6;cursor:not-allowed}
+.dc-form p{margin:0;color:#9aa4b2;padding-top:6px}
+
+@media (max-width:700px){
+  .dc-form{width:100%;padding:0 8px}
+}

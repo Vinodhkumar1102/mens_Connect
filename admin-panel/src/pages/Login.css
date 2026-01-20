@@ -1,0 +1,166 @@
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* dark overlay */
+  position: relative;
+  padding-bottom: 120px; /* ensure content isn't hidden behind fixed footer */
+}
+
+/* Admin navbar */
+.admin-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  pointer-events: auto;
+  background: #ffffff; /* white background */
+  padding: 0 12px; /* no padding on top */
+  height: 80px; /* explicit height to accommodate larger logo */
+  border-radius: 0; /* flush to screen edges */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.admin-navbar .nav-left,
+.admin-navbar .nav-center,
+.admin-navbar .nav-right {
+  pointer-events: auto; /* allow interactions for children if needed */
+}
+.nav-logo {
+  width: px;
+  height: 64px;
+  display: block;
+  border-radius: 6px;
+  background: transparent;
+  padding: 2px;
+  margin-left: 8px; /* small offset from very left edge */
+}
+
+.nav-title {
+  color: #111;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 0.2px;
+  color:red
+}
+
+/* removed .login-top-title (no longer used in card) */
+
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent; /* show background image clearly */
+}
+
+.login-block {
+  position: absolute; /* container to hold card + below text */
+  top: 210px; /* distance from top of page */
+  left: 250px; /* left padding from screen edge */
+  z-index: 10001;
+  width: 420px;
+}
+
+.login-card {
+  position: relative; /* inside the block */
+  background: #1f1f1f;
+  padding: 20px 32px 28px 32px; /* tighter top padding so header sits at top */
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  text-align: left; /* align header left */
+}
+
+.login-card h2 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* ensure form and button align nicely */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.quote {
+  margin-top: 14px;
+  color: #ddd;
+  font-style: italic;
+  text-align: center;
+  font-size: 13px;
+}
+
+.below-card-text {
+  margin-top: 30px;
+  color: #fff;
+  background: rgba(220,20,60,0.95); /* blood-red background */
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 1000;
+  font-size: 25px;
+}
+
+/* Footer at bottom of page */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10002;
+  text-align: center;
+  color:black;
+  padding: 12px 0;
+  font-size: 15px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #1259a5;
+}
+
+.login-card button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}

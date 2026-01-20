@@ -1,0 +1,28 @@
+.dashboard-navbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 64px;
+	background: #ffffff;
+	display: grid;
+	grid-template-columns: 180px 1fr 180px;
+	align-items: center;
+	padding: 0 18px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	z-index: 120;
+}
+
+.navbar-left{display:flex;align-items:center;gap:10px}
+.navbar-logo{height:40px;width:auto;border-radius:6px}
+
+.navbar-center{justify-self:center;font-weight:700;color:#111;font-size:18px}
+
+.navbar-right{display:flex;justify-self:end;align-items:center}
+
+.nav-notif{position:relative;background:transparent;border:none;cursor:pointer;font-size:18px;color:#e53935;transition:color 0.3s ease}
+
+.nav-notif:hover{color:#c62828}
+
+/* push main content down a bit if desired; by default we won't add large padding */
+.dc-with-navbar{padding-top:72px}
